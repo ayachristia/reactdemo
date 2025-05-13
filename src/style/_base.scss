@@ -1,0 +1,22 @@
+@use './variables' as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: $neutralDGrey;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1{
+    font-size: $headline1;
+}
+
+h2{
+    font-size: $headline2;
+}
+

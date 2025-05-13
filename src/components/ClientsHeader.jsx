@@ -4,12 +4,14 @@
     import icon3 from "/icons/Logo3.png";
     import icon4 from "/icons/Logo4.png";
     import icon5 from "/icons/Logo5.png";
+    
+import '/src/style/style.scss';
 
 
 export default function ClientsHeader(){
     return (
         <>
-        <div className="clients">
+        <section className="clients">
 
             <header className="clients__header">
                 <h2 className="clients__headline">
@@ -21,15 +23,31 @@ export default function ClientsHeader(){
             </header>
 
             <footer className="clients__footer">
-                <img src={icon0} alt="Icon" className="clients__icon" />
-                <img src={icon1} alt="Icon" className="clients__icon" />
-                <img src={icon2} alt="Icon" className="clients__icon" />
-                <img src={icon3} alt="Icon" className="clients__icon" />
-                <img src={icon4} alt="Icon" className="clients__icon" />
-                <img src={icon5} alt="Icon" className="clients__icon" />
-                <img src={icon2} alt="Icon" className="clients__icon" />
+                <ul className="clients__logo-list">
+                    <li>
+                    <img src={icon0} alt="Icon 1" className="clients__icon" />
+                    </li>
+                    <li>
+                    <img src={icon1} alt="Icon 2" className="clients__icon" />
+                    </li>
+                    <li>
+                    <img src={icon2} alt="Icon 3" className="clients__icon" />
+                    </li>
+                    <li>
+                    <img src={icon3} alt="Icon 4" className="clients__icon" />
+                    </li>
+                    <li>
+                    <img src={icon4} alt="Icon 5" className="clients__icon" />
+                    </li>
+                    <li>
+                    <img src={icon5} alt="Icon 6" className="clients__icon" />
+                    </li>
+                    <li>
+                    <img src={icon2} alt="Icon 7" className="clients__icon" />
+                    </li>
+                </ul>
             </footer>
-        </div>
+        </section>
         </>
     )
 }

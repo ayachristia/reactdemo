@@ -1,26 +1,41 @@
-// import { useState } from 'react'
-// import { Fragment } from 'react' || <>
-// import reactLogo from './assets/react.svg'
-// import Headline from './components/Headline'
-// import Card from './components/cards'
-// import viteLogo from '/vite.svg'
+import '/src/style/style.scss';
+import Section from './components/Section';
 
-import './App.css'
 import Hero from './components/Hero'
 import ClientsHeader from './components/ClientsHeader'
 import Community from './components/Community'
+import Achievements from './components/Achievements';
+import Marketing from './components/CommunityUpdates';
+
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <>
-      < Hero/>
-      < ClientsHeader/>
-      < Community/>
+    <main>
+      <section className="home">
+         <Section backgroundColor="#F5F7FA">< Hero/></Section>
+          <Section>
+          < ClientsHeader/>
+          </Section>
+          <Section backgroundColor="#FFFFFF">
+          < Community/>
+          </Section>
+      </section>
+     
+     <section className="body">
+          < Section backgroundColor="#F5F7FA">
+          < Achievements/>
+          </Section>
+          < Section backgroundColor="#FFFFFF">
+          < Marketing/>
+          </Section>
+    </section>
+      
+      
+    </main>
     </>
   )
-
 }
 
   export default App

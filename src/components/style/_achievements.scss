@@ -1,0 +1,52 @@
+@use '/src/style/variables' as *;
+
+.achievements{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 66px 0;
+    &__section{
+        text-align: left;
+    }
+    &__header{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    
+    &__headline{
+        text-align: left;
+        display: inline-block;
+        font-size: clamp(36px, 3vw, 44px);
+        line-height: 3.2rem;
+        &--green{
+            color: $colorPrimary;
+            display: block;
+        }
+    }
+    &__text{
+        font-size: clamp(1rem, 2vw, 20px);
+    }
+    &__activity{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+.achievementsCard{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    &__logocontainer{
+        width: 48px;
+        height: 48px;
+    }
+    &__int{
+        font-size: clamp(28px, 2vw, 36px);
+        line-height: 1.8rem;
+    }
+    &__text{
+        font-size: clamp(16px, 2vw, 24px);
+    }
+}

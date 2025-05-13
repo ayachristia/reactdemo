@@ -1,0 +1,37 @@
+@use '/src/style/variables' as *;
+
+.hero{
+
+    max-width: 100vw;
+    padding: 96px 0;
+    &__slide{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        text-align: left;
+    }
+    // &__imgcontainer{
+    //     // height: 400px;
+    // }
+    &__img{
+        height: auto;
+    }
+    &__textbox{
+        padding: 2rem;
+    }
+    &__headline{
+        margin: 0;
+        line-height: 4.2rem;
+        margin-bottom: 1rem;
+        color: $neutralDGrey;
+        &--green{
+            color: $colorPrimary;
+            display: block;
+        }
+    }
+    &__phara{
+        font-size: clamp(16px, 2vw, 24px);
+        color: $neutralGrey;
+        margin-bottom: 2rem;
+    }
+}

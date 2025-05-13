@@ -1,19 +1,19 @@
 import heroSvg from '/imgs/Illustration.svg'
+import '/src/style/style.scss';
+import Button from './button';
+
 
 export default function Hero(){
     return (
         <>
-        <div className="hero">
+        <section className="hero">
 
-            <div className="hero__imgContainer">
-                <img src={heroSvg} alt="" className="hero__img" />
-            </div>
+            <section className="hero__slide">
 
-
-            <div className="hero__textbox">
+            <section className="hero__textbox">
                 <section className="hero__text">
                     <h1 className="hero__headline">
-                        <span className="hero__headline--black">
+                        <span className=" hero__headline--black">
                             Lessons and insights
                         </span>
                         <span className="hero__headline--green">
@@ -25,13 +25,17 @@ export default function Hero(){
                     </p>
                 </section>
 
-                <button className="hero__btn">
-                    Register
-                </button>
+                <Button background="#4CAF4F">Register</Button>
+            </section>
+            
+            <div className="hero__imgcontainer">
+                <img src={heroSvg} alt="" className="hero__img" />
             </div>
+            </section>
+            
 
 
-        </div>
+        </section>
         </>
     )
 }
