@@ -1,10 +1,6 @@
-import CommunityUpdateCards from "./CommunityUpdateCards"
+import MarketingCard from './MarketingCard';
+import { communityUpdateCards } from '../data';
 import '/src/style/style.scss';
-
-import image1 from '/communityUpdate/streamlined.jpg';
-import image2 from '/communityUpdate/safeguard.jpg';
-import image3 from '/communityUpdate/revamp.jpg';
-
 
 export default function communityUpdate(){
     return (
@@ -20,21 +16,14 @@ export default function communityUpdate(){
         </header>
 
         <section className="communityUpdate__main">
-            < CommunityUpdateCards
-            image={image1}
-            text="Creating Streamlined Safeguarding Processes with OneRen"
-            link="#"
-            />
-            < CommunityUpdateCards
-            image={image2}
-            text="What are your safeguarding responsibilities and how can you manage them?"
-            link="#"
-            />
-            < CommunityUpdateCards
-            image={image3}
-            text="Revamping the Membership Model with Triathlon Australia"
-            link="#"
-            />
+            {communityUpdateCards.map(card=>(
+               <MarketingCard
+               key={card.id}
+               image={card.image}
+               text={card.text}
+               link={card.link}
+               />
+            ))}
         </section>
 
         </section>

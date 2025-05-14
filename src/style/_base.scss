@@ -7,16 +7,11 @@
 }
 
 body{
-    color: $neutralDGrey;
-  min-width: 320px;
-  min-height: 100vh;
+  color: $neutralDGrey;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-h1{
-    font-size: $headline1;
-}
 
-h2{
-    font-size: $headline2;
-}
 

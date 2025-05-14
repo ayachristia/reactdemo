@@ -1,11 +1,19 @@
+#root{
+    max-width: 100%;
+}
+
+
 .home{
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     gap: 44px;
 }
 
 .body{
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     gap: 48px;
+    margin-bottom: 84px;
 }

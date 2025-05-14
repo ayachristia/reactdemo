@@ -1,6 +1,6 @@
 import rightArrow from '/communityUpdate/Right.png'
 
-export default function communityUpdateCards({image, text, link}){
+export default function MarketingCard({image, text, link}){
     return (
         <>
         <section className="marketingCard">

@@ -56,6 +56,10 @@
         padding-bottom: 1.5rem;
         &--green{
             color: $colorPrimary;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 

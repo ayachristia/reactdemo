@@ -17,7 +17,7 @@
     &__headline{
         text-align: left;
         display: inline-block;
-        font-size: clamp(36px, 3vw, 44px);
+        font-size: $headline2;
         line-height: 3.2rem;
         &--green{
             color: $colorPrimary;
@@ -25,7 +25,7 @@
         }
     }
     &__text{
-        font-size: clamp(1rem, 2vw, 20px);
+        font-size: $regular3;
     }
     &__activity{
         display: grid;
@@ -39,14 +39,14 @@
     align-items: center;
     gap: 1rem;
     &__logocontainer{
-        width: 48px;
-        height: 48px;
+        max-width: 48px;
+        max-height: 48px;
     }
     &__int{
-        font-size: clamp(28px, 2vw, 36px);
+        font-size: $headline3;
         line-height: 1.8rem;
     }
     &__text{
-        font-size: clamp(16px, 2vw, 24px);
+        font-size: $regular3;
     }
 }
