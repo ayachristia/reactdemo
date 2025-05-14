@@ -8,7 +8,6 @@
     justify-content: center;
     gap: 8px;
 
-    padding: 0 2rem;
     margin-bottom: 3rem;
 
     &__header{
@@ -30,7 +29,7 @@
     }
     &__main{
         display: grid;
-        grid-template-columns: repeat(3, 300px);
+        grid-template-columns: repeat(3, minmax(100px,300px));
         justify-content: space-between;
     }
 }
@@ -40,6 +39,6 @@
     box-shadow: 0 3px 2px 3px #abbed120;
     border-radius: 0 0 10px 10px;
     &__header{
-        margin: 1rem;
+        margin: 1em;
     }
 }

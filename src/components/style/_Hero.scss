@@ -2,7 +2,7 @@
 
 .hero{
 
-    max-width: 100vw;
+    max-width: 100%;
     padding: 96px 0;
     &__slide{
         display: grid;
@@ -10,16 +10,18 @@
         align-items: center;
         text-align: left;
     }
-    // &__imgcontainer{
-    //     // height: 400px;
-    // }
+    &__imgcontainer{
+        max-width: 391px;
+    }
     &__img{
+        width: 100%;
         height: auto;
     }
     &__textbox{
         padding: 2rem;
     }
     &__headline{
+        font-size: $headline1;
         margin: 0;
         line-height: 4.2rem;
         margin-bottom: 1rem;

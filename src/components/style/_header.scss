@@ -1,27 +1,40 @@
+@use '/src/style/variables' as *;
+
 .header{
-    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     &__logocontainer{
-        height: 30px;
+        height: 34px;
+        max-width: min(10rem,16%);
     }
     &__logo{
         height: 100%;
+        width: 100%;
         color: #263238;
     }
 
     &__nav{
         display: flex;
         gap: 50px;
+        // margin-left: 7rem;
     }
     &__navitem{
         text-decoration: none;
+        font-size: $regular2;
         color: #18191F;
+    }
+
+    &__login{
+        display: flex;
+        justify-content: end;
+        width: 300px;
     }
 
     &__btnhide{
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.3s ease;
     }
 }
