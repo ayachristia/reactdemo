@@ -1,0 +1,27 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    &__logocontainer{
+        height: 30px;
+    }
+    &__logo{
+        height: 100%;
+        color: #263238;
+    }
+
+    &__nav{
+        display: flex;
+        gap: 50px;
+    }
+    &__navitem{
+        text-decoration: none;
+        color: #18191F;
+    }
+
+    &__btnhide{
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+}

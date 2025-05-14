@@ -2,9 +2,10 @@
 @use './base';
 @use './App.scss';
 @use './index.scss';
+@use '/src/components/style/header.scss';
 @use '/src/components/style/Hero.scss';
-@use '/src/components/style/service.scss';
 @use '/src/components/style/clients.scss';
+@use '/src/components/style/unlock.scss';
 @use '/src/components/style/community.scss';
 @use '/src/components/style/achievements.scss';
 @use '/src/components/style/section.scss';

@@ -1,0 +1,31 @@
+@use '/src/style/variables' as *;
+
+.unlock{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: center;
+    &__imgcontainer{
+        max-height: 433px;
+    }
+    &__img{
+        max-width: 442px;
+        height: 329px;
+    }
+    &__content{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &__textbox{
+        max-width: 601px;
+    }
+    &__headline{
+        font-size: $headline2;
+    }
+    &__text{
+        font-size: $regular3;
+        color: $neutralGrey;
+    }
+}
