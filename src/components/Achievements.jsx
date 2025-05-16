@@ -1,13 +1,32 @@
 import '/src/style/style.scss';
 import StatsCards from './StatsCards';
-import { achievementsCards } from '../data';
+// import { achievementsCards } from '../data';
+import { useEffect, useState } from 'react';
 
-// import membersLogo from "/achievements/Vector1.png";
-// import clubs from "/achievements/vector2.png";
-// import event from "/achievements/Vector3.png";
-// import payment from "/achievements/Vector4.png";
+
 
 export default function Achievements(){
+    const [statsData, setStatsData] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(()=>{
+        async function fetchData(){
+            try{
+                const url = "/cards.json";
+                const response = await fetch(url)
+                const data = await response.json()
+                setStatsData(data)
+            }catch(error){
+                console.error('Error fetching data:', error)
+            }finally{
+                setIsLoading(false)
+            }
+        }
+        fetchData()
+    }, [])
+
+    console.log('StatsData;',statsData)
+
     return (
         <>
         <section className="achievements">
@@ -23,7 +42,8 @@ export default function Achievements(){
 
         <section className="achievements__section">
             <section className="achievements__activity">
-                {achievementsCards.map(card=>(
+                
+                {isLoading ? <h1>Loading...</h1> : statsData.stats.map(card=>(
                     <StatsCards
                     key={card.id}
                     logo={card.logo}

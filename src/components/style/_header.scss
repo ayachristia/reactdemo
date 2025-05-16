@@ -2,6 +2,7 @@
 
 .header{
     max-width: 100%;
+    height: 84px;
     overflow: hidden;
     display: flex;
     justify-content: space-around;
@@ -26,7 +27,9 @@
         font-size: $regular2;
         color: #18191F;
     }
-
+    &__navitem:hover{
+        color: #4CAF4F;
+    }
     &__login{
         display: flex;
         justify-content: end;

@@ -1,8 +1,30 @@
 import MarketingCard from './MarketingCard';
 import { communityUpdateCards } from '../data';
 import '/src/style/style.scss';
+import { useEffect, useState } from 'react';
+
 
 export default function communityUpdate(){
+    const [marketingData, setMarketingData] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(()=>{
+        async function fetchdata(){
+            try{
+                const url = "/cards.json"
+                const response = await fetch(url)
+                const data = await response.json()
+                setMarketingData(data)
+            }catch (error){
+                console.error('Error fetching data:', error)
+            }finally{
+                setIsLoading(false)
+            }
+        }
+        fetchdata()
+    }, [])
+
+
     return (
         <>
         <section className="communityUpdate">
@@ -16,7 +38,7 @@ export default function communityUpdate(){
         </header>
 
         <section className="communityUpdate__main">
-            {communityUpdateCards.map(card=>(
+            {isLoading ? <h1>Loading</h1> : marketingData.marketing.map(card=>(
                <MarketingCard
                key={card.id}
                image={card.image}

@@ -9,10 +9,13 @@ import Marketing from './components/CommunityUpdates';
 import Unlock from './components/Unlock';
 import Header from './components/header';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 function App() {
+
+  
+
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
   // useState: 
   // let walkingLight = "Green"

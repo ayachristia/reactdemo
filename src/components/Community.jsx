@@ -1,9 +1,42 @@
 import MemberCard from "./CommunityCards";
 import '/src/style/style.scss';
-import { communityCards } from "../data";
+import { useEffect, useState } from 'react';
 
 
 export default function Community(){
+
+    //klassisk callback function/sideEffect
+      //if dependency array is empty, useEffect hook only fires when component is shown on screen 1st time
+    
+      //re-rending af useEffect data
+      const [communityData, setCommunityData] = useState(null);
+      //til alternativ UI some placeholder billede
+      const [isLoading, setIsLoading] = useState(true);
+    
+      useEffect(()=>{
+        async function fetchData(){
+          try{
+          const url = "/cards.json"
+          const response = await fetch(url)
+          const data = await response.json()
+          setCommunityData(data)
+        }catch (error){
+          console.error('Error fetching data:', error)
+        } finally {
+          setIsLoading(false); // Same idea as the `.finally()` block
+        }
+        }
+        fetchData()
+        
+      }, [])
+
+      console.log(communityData)
+   
+      // fetch("/communityCards.json")
+      // .then(res=>res.json())
+      // .then(result => console.log(result))
+      //.finally(() => setIsLoading(false))
+
     return (
         <>
         <section className="community">
@@ -17,7 +50,7 @@ export default function Community(){
             </header>
 
             <section className="community__main">
-                {communityCards.map(card=> (
+                {isLoading ? <h1>Loading...</h1>:communityData.communities.map(card=> (
                     <MemberCard 
                     key={card.id}
                     image={card.image} 
